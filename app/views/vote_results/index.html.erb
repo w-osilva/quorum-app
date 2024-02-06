@@ -1,0 +1,21 @@
+<h1>Vote Results</h1>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>Legislator</th>
+    <th>Bill</th>
+    <th>Vote type</th>
+    <th>Actions</th>
+  </tr>
+
+  <% @vote_results.each do |vote_result| %>
+    <tr>
+      <td><%= vote_result.id %></td>
+      <td><%= vote_result.legislator&.name %></td>
+      <td><%= vote_result.bill&.title %></td>
+      <td><%= vote_result.vote_type %></td>
+      <td></td>
+    </tr>
+  <% end %>
+</table>
