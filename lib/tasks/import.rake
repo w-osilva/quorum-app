@@ -1,7 +1,7 @@
 namespace :import do
   desc 'Import data from CSV files to database'
 
-  task all: :environment do
+  task data: :environment do
     path = Rails.root.join('lib/files')
 
     puts 'Importing legislators'
