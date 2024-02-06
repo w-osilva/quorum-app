@@ -1,0 +1,7 @@
+<h1>Bill</h1>
+
+<% @bill.attributes.each_pair do |key, value| %>
+  <p><strong><%= key %>:</strong> <%= value %></p>
+<% end %>
+
+<%= link_to 'Back', :back %>

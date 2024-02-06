@@ -1,0 +1,19 @@
+<h1>Bills</h1>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>Title</th>
+    <th>Sponsor</th>
+    <th>Actions</th>
+  </tr>
+
+  <% @bills.each do |bill| %>
+    <tr>
+      <td><%= bill.id %></td>
+      <td><%= bill.title %></td>
+      <td><%= bill.sponsor&.name %></td>
+      <td><%= link_to 'Show', bill %></td>
+    </tr>
+  <% end %>
+</table>
