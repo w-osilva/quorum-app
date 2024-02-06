@@ -1,6 +1,6 @@
 class LegislatorsController < ApplicationController
   def index
-    @legislators = Legislator.all
+    @legislators = scope.all
 
     respond_to do |format|
       format.html
@@ -10,11 +10,17 @@ class LegislatorsController < ApplicationController
   end
 
   def show
-    @legislator = Legislator.find(params[:id])
+    @legislator = scope.find(params[:id])
 
     respond_to do |format|
       format.html
       format.json { render json: @legislator }
     end
+  end
+
+  private
+
+  def scope
+    Legislator.includes(:bills)
   end
 end

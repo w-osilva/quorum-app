@@ -1,6 +1,6 @@
 class BillsController < ApplicationController
   def index
-    @bills = Bill.includes(:sponsor).all
+    @bills = scope.all
 
     respond_to do |format|
       format.html
@@ -10,11 +10,17 @@ class BillsController < ApplicationController
   end
 
   def show
-    @bill = Bill.find(params[:id])
+    @bill = scope.find(params[:id])
 
     respond_to do |format|
       format.html
       format.json { render json: @bill }
     end
+  end
+
+  private
+
+  def scope
+    Bill.includes(:sponsor)
   end
 end

@@ -1,6 +1,6 @@
 class VotesController < ApplicationController
   def index
-    @votes = Vote.includes(:bill).all
+    @votes = scope.all
 
     respond_to do |format|
       format.html
@@ -10,11 +10,17 @@ class VotesController < ApplicationController
   end
 
   def show
-    @vote = Vote.includes(:bill).find(params[:id])
+    @vote = scope.find(params[:id])
 
     respond_to do |format|
       format.html
       format.json { render json: @vote }
     end
+  end
+
+  private
+
+  def scope
+    Vote.includes(:bill)
   end
 end
