@@ -1,19 +1,25 @@
-<h1>Bills</h1>
+<div class="header">
+  <h1>Bills</h1>
+</div>
 
-<table>
-  <tr>
-    <th>id</th>
-    <th>Title</th>
-    <th>Sponsor</th>
-    <th>Actions</th>
-  </tr>
+<div class="content">
+  <table class="pure-table-striped">
+    <thead>
+      <th>id</th>
+      <th>Title</th>
+      <th>Sponsor</th>
+      <th>Actions</th>
+    </thead>
 
-  <% @bills.each do |bill| %>
-    <tr>
-      <td><%= bill.id %></td>
-      <td><%= bill.title %></td>
-      <td><%= bill.sponsor&.name %></td>
-      <td><%= link_to 'Show', bill %></td>
-    </tr>
-  <% end %>
-</table>
+    <tbody>
+    <% @bills.each do |bill| %>
+      <tr>
+        <td><%= bill.id %></td>
+        <td><%= bill.title %></td>
+        <td><%= bill.sponsor&.name %></td>
+        <td><%= link_to 'Show', bill, class: 'pure-button' %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,17 +1,23 @@
-<h1>Votes</h1>
+<div class="header">
+  <h1>Votes</h1>
+</div>
 
-<table>
-  <tr>
-    <th>id</th>
-    <th>Bill</th>
-    <th>Actions</th>
-  </tr>
+<div class="content">
+  <table class="pure-table-striped">
+    <thead>
+      <th>id</th>
+      <th>Bill</th>
+      <th>Actions</th>
+    </thead>
 
-  <% @votes.each do |vote| %>
-    <tr>
-      <td><%= vote.id %></td>
-      <td><%= vote.bill&.title %></td>
-      <td><%= link_to 'Show', vote %></td>
-    </tr>
-  <% end %>
-</table>
+    <tbody>
+    <% @votes.each do |vote| %>
+      <tr>
+        <td><%= vote.id %></td>
+        <td><%= vote.bill&.title %></td>
+        <td><%= link_to 'Show', vote, class: 'pure-button' %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

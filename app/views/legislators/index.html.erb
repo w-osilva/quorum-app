@@ -1,23 +1,29 @@
-<h1>Legislators</h1>
+<div class="header">
+  <h1>Legislators</h1>
+</div>
 
-<table>
-  <tr>
-    <th>id</th>
-    <th>Name</th>
-    <th>Sponsored Bills</th>
-    <th>Supported Bills</th>
-    <th>Opposed Bills</th>
-    <th>Actions</th>
-  </tr>
+<div class="content">
+  <table class="pure-table-striped">
+    <thead>
+      <th>id</th>
+      <th>Name</th>
+      <th>Sponsored Bills</th>
+      <th>Supported Bills</th>
+      <th>Opposed Bills</th>
+      <th>Actions</th>
+    </thead>
 
-  <% @legislators.each do |legislator| %>
-    <tr>
-      <td><%= legislator.id %></td>
-      <td><%= legislator.name %></td>
-      <td><%= legislator.bills.count %></td>
-      <td><%= legislator.supported_bills.count %></td>
-      <td><%= legislator.opposed_bills.count %></td>
-      <td><%= link_to 'Show', legislator %></td>
-    </tr>
-  <% end %>
-</table>
+    <tbody>
+    <% @legislators.each do |legislator| %>
+      <tr>
+        <td><%= legislator.id %></td>
+        <td><%= legislator.name %></td>
+        <td><%= legislator.bills.count %></td>
+        <td><%= legislator.supported_bills.count %></td>
+        <td><%= legislator.opposed_bills.count %></td>
+        <td><%= link_to 'Show', legislator, class: 'pure-button' %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
