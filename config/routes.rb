@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :legislators, only: %i[index show]
+  resources :bills, only: %i[index show]
 end
