@@ -10,4 +10,5 @@ Rails.application.routes.draw do
 
   resources :legislators, only: %i[index show]
   resources :bills, only: %i[index show]
+  resources :votes, only: %i[index show]
 end
