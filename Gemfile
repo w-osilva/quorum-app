@@ -15,13 +15,13 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]
   gem 'factory_bot_rails'
+  gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
+  gem 'shoulda-matchers'
 end
 
 group :development do
-  gem 'rspec-rails'
-  gem 'shoulda-matchers'
   gem 'web-console'
 end
