@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe "Legislators", type: :request do
   describe "GET /index" do
     before do

@@ -2,6 +2,6 @@ FactoryBot.define do
   factory :legislator do
     sequence(:id) { |n| n }
 
-    name { "John Doe" }
+    name { Faker::Name.name }
   end
 end
