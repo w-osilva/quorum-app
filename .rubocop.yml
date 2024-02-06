@@ -19,13 +19,15 @@ AllCops:
   Exclude:
     - "bin/*"
     - "config/*"
-    - "db/migrate/*"
     - "db/schema.rb"
     - "vendor/**/*"
     - "config/routes.rb"
 
 Layout/EndOfLine:
   Enabled: false
+Metrics/MethodLength:
+  Exclude:
+    - "db/migrate/**/*"
 Style/Documentation:
   Enabled: false
 Style/FrozenStringLiteralComment:
