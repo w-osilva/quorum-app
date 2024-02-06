@@ -4,6 +4,9 @@
   <tr>
     <th>id</th>
     <th>Name</th>
+    <th>Sponsored Bills</th>
+    <th>Supported Bills</th>
+    <th>Opposed Bills</th>
     <th>Actions</th>
   </tr>
 
@@ -11,6 +14,9 @@
     <tr>
       <td><%= legislator.id %></td>
       <td><%= legislator.name %></td>
+      <td><%= legislator.bills.count %></td>
+      <td><%= legislator.supported_bills.count %></td>
+      <td><%= legislator.opposed_bills.count %></td>
       <td><%= link_to 'Show', legislator %></td>
     </tr>
   <% end %>
