@@ -1,0 +1,17 @@
+<h1>Votes</h1>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>Bill</th>
+    <th>Actions</th>
+  </tr>
+
+  <% @votes.each do |vote| %>
+    <tr>
+      <td><%= vote.id %></td>
+      <td><%= vote.bill&.title %></td>
+      <td><%= link_to 'Show', vote %></td>
+    </tr>
+  <% end %>
+</table>
