@@ -4,6 +4,8 @@ This is a code chllenge purposed by Quorum.
 The challenge consists of creating a simple web application for reading data from CSV and to provide some interface for
 the user to interact with the data.
 
+Here are the [Questions and Answers](questions.md) for the challenge.
+
 ## Dependencies
 
 - Ruby >= 3.3.0
