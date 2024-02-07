@@ -22,7 +22,7 @@ As example, I can highlight the importer process, where I applied an upsert in b
 
 ### Question 2
 
-For bringing the “Bill Voted On Date” information I would add a new column in votes  table recording the date when the vote was created.  
+For bringing the “Bill Voted On Date” information I would add a new column `created_at` in votes table recording the date when the vote was created.  
 
 For recording “Co-Sponsors” of a Bill, I would change to _N:N_ the relation between `bills` and `sponsors` through of a new table `bill_sponsors` . I also would add a column in this new table to identify the `sponsor_type`:
 
@@ -33,7 +33,7 @@ For recording “Co-Sponsors” of a Bill, I would change to _N:N_ the relation 
 
 ### Question 3
 
-If I needed to change the project to export CSVs instead to read them, I would develop a generic csv exporter to be reused in all entities of the project.
+If I needed to change the project to export CSVs instead to read them, I would develop a generic csv exporter to be reused in all controllers of the project.
 
 Internally, the application is ready to load data and deliver the response in different formats. I have applied this approach in `controllers` and the user can choose the format adding it on url. Examples:
 
