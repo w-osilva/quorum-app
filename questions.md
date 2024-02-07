@@ -24,7 +24,7 @@ As example, I can highlight the importer process, where I applied an upsert in b
 
 For bringing the “Bill Voted On Date” information I would add a new column in votes  table recording the date when the vote was created.  
 
-For recording “Co-Sponsors” of a Bill, I would change to N:N the relation between bills and legislators through of a new table bill_sponsors . I also would add a column in this new table for identify if sponsor_type (primary, co-sponsor).
+For recording “Co-Sponsors” of a Bill, I would change to _N:N_ the relation between `bills` and `sponsors` through of a new table `bill_sponsors` . I also would add a column in this new table to identify the `sponsor_type`:
 
 | id (Integer) | bill_id (Integer) | sponsor_id (Integer) | sponsor_type (Integer) |
 | --- | --- | --- | --- |
